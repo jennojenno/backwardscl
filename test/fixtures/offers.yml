@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ownermake: MyString
+  ownermodel: MyString
+  owneryear: 1
+  ownermileage: 1
+  ownerdesc: MyText
+  ownercartype: MyString
+  offerprice: 1
+  image1: MyString
+  seller_id: 1
+  estvalue: 1
+
+two:
+  ownermake: MyString
+  ownermodel: MyString
+  owneryear: 1
+  ownermileage: 1
+  ownerdesc: MyText
+  ownercartype: MyString
+  offerprice: 1
+  image1: MyString
+  seller_id: 1
+  estvalue: 1

@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Car type:</b>
+  <%= @wanted_ad.car_type %>
+</p>
+
+<p>
+  <b>Car make:</b>
+  <%= @wanted_ad.car_make %>
+</p>
+
+<p>
+  <b>Car model:</b>
+  <%= @wanted_ad.car_model %>
+</p>
+
+<p>
+  <b>Mileage from:</b>
+  <%= @wanted_ad.mileage_from %>
+</p>
+
+<p>
+  <b>Mileage to:</b>
+  <%= @wanted_ad.mileage_to %>
+</p>
+
+<p>
+  <b>Budget from:</b>
+  <%= @wanted_ad.budget_from %>
+</p>
+
+<p>
+  <b>Budget to:</b>
+  <%= @wanted_ad.budget_to %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @wanted_ad.description %>
+</p>
+
+<p>
+  <b>Desired mpg:</b>
+  <%= @wanted_ad.desired_mpg %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @wanted_ad.color %>
+</p>
+
+<p>
+  <b>Year from:</b>
+  <%= @wanted_ad.year_from %>
+</p>
+
+<p>
+  <b>Year to:</b>
+  <%= @wanted_ad.year_to %>
+</p>
+
+
+<%= link_to 'Edit', edit_wanted_ad_path(@wanted_ad) %> |
+<%= link_to 'Back', wanted_ads_path %>

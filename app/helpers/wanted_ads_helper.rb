@@ -1,0 +1,2 @@
+module WantedAdsHelper
+end

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  car_type: MyString
+  car_make: MyString
+  car_model: MyString
+  mileage_from: 1
+  mileage_to: 1
+  budget_from: 1
+  budget_to: 1
+  description: MyText
+  desired_mpg: 1
+  color: MyString
+  year_from: 1
+  year_to: 1
+
+two:
+  car_type: MyString
+  car_make: MyString
+  car_model: MyString
+  mileage_from: 1
+  mileage_to: 1
+  budget_from: 1
+  budget_to: 1
+  description: MyText
+  desired_mpg: 1
+  color: MyString
+  year_from: 1
+  year_to: 1

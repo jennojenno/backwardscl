@@ -1,0 +1,65 @@
+<%= form_for(@wanted_ad) do |f| %>
+  <% if @wanted_ad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wanted_ad.errors.count, "error") %> prohibited this wanted_ad from being saved:</h2>
+
+      <ul>
+      <% @wanted_ad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :car_type %><br />
+    <%= f.text_field :car_type %>
+  </div>
+  <div class="field">
+    <%= f.label :car_make %><br />
+    <%= f.text_field :car_make %>
+  </div>
+  <div class="field">
+    <%= f.label :car_model %><br />
+    <%= f.text_field :car_model %>
+  </div>
+  <div class="field">
+    <%= f.label :mileage_from %><br />
+    <%= f.number_field :mileage_from %>
+  </div>
+  <div class="field">
+    <%= f.label :mileage_to %><br />
+    <%= f.number_field :mileage_to %>
+  </div>
+  <div class="field">
+    <%= f.label :budget_from %><br />
+    <%= f.number_field :budget_from %>
+  </div>
+  <div class="field">
+    <%= f.label :budget_to %><br />
+    <%= f.number_field :budget_to %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :desired_mpg %><br />
+    <%= f.number_field :desired_mpg %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :year_from %><br />
+    <%= f.number_field :year_from %>
+  </div>
+  <div class="field">
+    <%= f.label :year_to %><br />
+    <%= f.number_field :year_to %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

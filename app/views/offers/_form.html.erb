@@ -1,0 +1,57 @@
+<%= form_for(@offer) do |f| %>
+  <% if @offer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
+
+      <ul>
+      <% @offer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ownermake %><br />
+    <%= f.text_field :ownermake %>
+  </div>
+  <div class="field">
+    <%= f.label :ownermodel %><br />
+    <%= f.text_field :ownermodel %>
+  </div>
+  <div class="field">
+    <%= f.label :owneryear %><br />
+    <%= f.number_field :owneryear %>
+  </div>
+  <div class="field">
+    <%= f.label :ownermileage %><br />
+    <%= f.number_field :ownermileage %>
+  </div>
+  <div class="field">
+    <%= f.label :ownerdesc %><br />
+    <%= f.text_area :ownerdesc %>
+  </div>
+  <div class="field">
+    <%= f.label :ownercartype %><br />
+    <%= f.text_field :ownercartype %>
+  </div>
+  <div class="field">
+    <%= f.label :offerprice %><br />
+    <%= f.number_field :offerprice %>
+  </div>
+  <div class="field">
+    <%= f.label :image1 %><br />
+    <%= f.text_field :image1 %>
+  </div>
+  <div class="field">
+    <%= f.label :seller_id %><br />
+    <%= f.number_field :seller_id %>
+  </div>
+  <div class="field">
+    <%= f.label :estvalue %><br />
+    <%= f.number_field :estvalue %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
