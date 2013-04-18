@@ -14,6 +14,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
+    #type = :type
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +25,7 @@ class UsersController < ApplicationController
   # GET /users/new
   # GET /users/new.json
   def new
-    @user = User.new
+    @user = User.new(:kind => params[:kind])
 
     respond_to do |format|
       format.html # new.html.erb

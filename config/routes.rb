@@ -1,9 +1,17 @@
 Backwardscl::Application.routes.draw do
-  resources :offers
+
+  get "static/index"
+
+  get "static/terms"
+
+  root :to => 'static#index'
+
+ 
 
 
-  resources :wanted_ads
-
+  resources :carswanted, :as => :wanted_ads, :controller => :wanted_ads do 
+     resources :offers
+   end 
 
   resources :users
 
