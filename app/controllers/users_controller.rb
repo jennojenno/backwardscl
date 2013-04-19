@@ -41,7 +41,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    @buyer = Buyer.new
     @user = User.new(params[:user], :kind => params[:kind])
+    if @user.is_a?(Buyer)
+      @buyer << @user 
+    end 
+
+      
 
     respond_to do |format|
       if @user.save
