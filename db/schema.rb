@@ -11,13 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130418190415) do
+ActiveRecord::Schema.define(:version => 20130421210146) do
 
   create_table "buyers", :force => true do |t|
     t.integer  "user_id"
     t.integer  "wantedad_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "cars", :force => true do |t|
+    t.string   "make"
+    t.string   "model"
+    t.integer  "year"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "offer_id"
   end
 
   create_table "offers", :force => true do |t|
@@ -33,6 +42,8 @@ ActiveRecord::Schema.define(:version => 20130418190415) do
     t.integer  "estvalue"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "user_id"
+    t.integer  "wanted_ad_id"
   end
 
   create_table "sellers", :force => true do |t|
@@ -49,9 +60,13 @@ ActiveRecord::Schema.define(:version => 20130418190415) do
     t.string   "password"
     t.string   "kind"
     t.integer  "zip"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.string   "remember_token"
+    t.string   "password_digest"
   end
+
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
   create_table "wanted_ads", :force => true do |t|
     t.string   "car_type"
@@ -68,6 +83,7 @@ ActiveRecord::Schema.define(:version => 20130418190415) do
     t.integer  "year_to"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+    t.integer  "user_id"
   end
 
 end

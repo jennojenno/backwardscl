@@ -42,7 +42,7 @@
 
 <p>
   <b>Seller:</b>
-  <%= @offer.seller_id %>
+  User <%= @offer.user_id %>
 </p>
 
 <p>
@@ -51,5 +51,9 @@
 </p>
 
 
-<%= link_to 'Edit', edit_offer_path(@offer) %> |
-<%= link_to 'Back', offers_path %>
+<%= link_to 'Edit', edit_wanted_ad_offer_path(@offer) %> |
+<%= link_to 'Back', wanted_ad_offers_path %>
+
+
+<P><%= Offer.carsearch %> 
+

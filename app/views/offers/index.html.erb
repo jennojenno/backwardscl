@@ -17,25 +17,25 @@
     <th></th>
   </tr>
 
-<% @offers.each do |offer| %>
-  <tr>
-    <td><%= offer.ownermake %></td>
-    <td><%= offer.ownermodel %></td>
-    <td><%= offer.owneryear %></td>
-    <td><%= offer.ownermileage %></td>
-    <td><%= offer.ownerdesc %></td>
-    <td><%= offer.ownercartype %></td>
-    <td><%= offer.offerprice %></td>
-    <td><%= offer.image1 %></td>
-    <td><%= offer.seller_id %></td>
-    <td><%= offer.estvalue %></td>
-    <td><%= link_to 'Show', offer %></td>
-    <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
-    <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% @wanted_ad.offers.each do |a| %>
+  <tr> 
+    <td><%= a.ownermake %></td>
+    <td><%= a.ownermodel %></td>
+    <td><%= a.owneryear %></td>
+    <td><%= a.ownermileage %></td>
+    <td><%= a.ownerdesc %></td>
+    <td><%= a.ownercartype %></td>
+    <td><%= a.offerprice %></td>
+    <td><%= a.image1 %></td>
+    <td><%= a.seller_id %></td>
+    <td><%= a.estvalue %></td>
+    <td><%= link_to 'Show', wanted_ad_offer_path(a.wanted_ad_id, a.id) %></td>
+    <td><%= link_to 'Edit', edit_wanted_ad_offer_path(a.wanted_ad_id, a.id) %></td>
+
   </tr>
+
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Offer', new_offer_path %>

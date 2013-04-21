@@ -5,7 +5,7 @@ one:
   lastname: MyString
   email: MyString
   password: MyString
-  type: 
+  kind: buyer
   zip: 1
 
 two:
@@ -13,5 +13,5 @@ two:
   lastname: MyString
   email: MyString
   password: MyString
-  type: 
+  kind: seller
   zip: 1

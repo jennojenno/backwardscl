@@ -1,8 +1,10 @@
 class OffersController < ApplicationController
-  # GET /offers
-  # GET /offers.json
+
   def index
-    @offers = Offer.all
+    #@offers = Offer.all
+    @wanted_ad = WantedAd.find(params[:wanted_ad_id])
+    @offers = Offer.where(:wanted_ad_id => params[:wanted_ad_id])
+
 
     respond_to do |format|
       format.html # index.html.erb
@@ -10,10 +12,13 @@ class OffersController < ApplicationController
     end
   end
 
-  # GET /offers/1
-  # GET /offers/1.json
+
   def show
     @offer = Offer.find(params[:id])
+    @wanted_ad = WantedAd.find(params[:wanted_ad_id])
+    # @make = @offer.ownermake
+    # @model = @offer.ownermodel
+    # @year = @offer.owneryear
 
     respond_to do |format|
       format.html # show.html.erb
@@ -21,10 +26,11 @@ class OffersController < ApplicationController
     end
   end
 
-  # GET /offers/new
-  # GET /offers/new.json
+
+
   def new
-    @offer = Offer.new
+    @offer = Offer.new(:wanted_ad_id => params[:wanted_ad_id])
+    @wanted_ad = WantedAd.find(params[:wanted_ad_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -32,13 +38,12 @@ class OffersController < ApplicationController
     end
   end
 
-  # GET /offers/1/edit
   def edit
     @offer = Offer.find(params[:id])
+    @wanted_ads = WantedAd.all 
   end
 
-  # POST /offers
-  # POST /offers.json
+
   def create
     @offer = Offer.new(params[:offer])
 
@@ -53,8 +58,7 @@ class OffersController < ApplicationController
     end
   end
 
-  # PUT /offers/1
-  # PUT /offers/1.json
+
   def update
     @offer = Offer.find(params[:id])
 
@@ -69,8 +73,7 @@ class OffersController < ApplicationController
     end
   end
 
-  # DELETE /offers/1
-  # DELETE /offers/1.json
+
   def destroy
     @offer = Offer.find(params[:id])
     @offer.destroy

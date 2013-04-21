@@ -1,12 +1,18 @@
 Backwardscl::Application.routes.draw do
 
+  get "sessions/new"
+
   get "static/index"
 
   get "static/terms"
 
   root :to => 'static#index'
 
+  #get "login" => "sessions#new", :as => "login"
  
+  #match '/signup',  to: 'users#new'
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
 
 
   resources :carswanted, :as => :wanted_ads, :controller => :wanted_ads do 
@@ -14,6 +20,7 @@ Backwardscl::Application.routes.draw do
    end 
 
   resources :users
+  resources :sessions, only: [:new, :create, :destroy]
 
 
   # The priority is based upon order of creation:
