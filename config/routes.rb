@@ -1,5 +1,7 @@
 Backwardscl::Application.routes.draw do
 
+  root :to => 'wanted_ads#index'
+
   get "sessions/new"
 
   get "static/index"
@@ -13,6 +15,7 @@ Backwardscl::Application.routes.draw do
   #match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+
 
 
   resources :carswanted, :as => :wanted_ads, :controller => :wanted_ads do 

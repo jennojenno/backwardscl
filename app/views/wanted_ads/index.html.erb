@@ -1,4 +1,4 @@
-<h1>Listing wanted_ads</h1>
+<h1>Latest Cars Wanted</h1>
 
 <table>
   <tr>
@@ -43,3 +43,27 @@
 <br />
 
 <%= link_to 'New Wanted ad', new_wanted_ad_path %>
+
+
+<h1>Log in</h1>
+
+<%= form_for(:session, url: sessions_path) do |f| %>
+
+    <p>
+        <%= f.label :email %><BR>
+        <%= f.text_field :email %>
+
+    </p>
+        <%= f.label :password %><BR>
+        <%= f.password_field :password %> 
+
+        <p>
+
+            <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+
+
+
+<% end %> 
+<p> <BR><B>Not registered? <%= link_to "Sign up!", new_user_path %></b>
+
+
