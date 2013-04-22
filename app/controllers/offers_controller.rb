@@ -17,9 +17,6 @@ class OffersController < ApplicationController
 
     @offer = Offer.find(params[:id])
     @wanted_ad = WantedAd.find(params[:wanted_ad_id])
-    # @make = @offer.ownermake
-    # @model = @offer.ownermodel
-    # @year = @offer.owneryear
 
     ownermake = @offer.ownermake
     ownermodel = @offer.ownermodel
@@ -57,12 +54,13 @@ class OffersController < ApplicationController
 
   def edit
     @offer = Offer.find(params[:id])
-    @wanted_ads = WantedAd.all 
+    @wanted_ad = WantedAd.find(params[:wanted_ad_id])
   end
 
 
   def create
     @offer = Offer.new(params[:offer])
+    @wanted_ad = WantedAd.find(params[:wanted_ad_id])
 
     respond_to do |format|
       if @offer.save
@@ -78,6 +76,7 @@ class OffersController < ApplicationController
 
   def update
     @offer = Offer.find(params[:id])
+    @wanted_ad = WantedAd.find(params[:wanted_ad_id])
 
     respond_to do |format|
       if @offer.update_attributes(params[:offer])

@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<h1>My Account </h1> <%= link_to 'Edit my account or password', edit_user_path(@user) %>
 <p>
   <b>Firstname:</b>
   <%= @user.firstname %>
@@ -16,11 +17,6 @@
 </p>
 
 <p>
-  <b>Password:</b>
-  <%= @user.password %>
-</p>
-
-<p>
   <b>Type:</b>
   <%= @user.kind %>
 </p>
@@ -30,8 +26,60 @@
   <%= @user.zip %>
 </p>
 
+<p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+  <h1>My Wanted Ads</h1>
+
+<table>
+  <tr>
+    <th>Car type</th>
+    <th>Car make</th>
+    <th>Car model</th>
+    <th>Mileage from</th>
+    <th>Mileage to</th>
+    <th>Budget from</th>
+    <th>Budget to</th>
+    <th>Description</th>
+    <th>Desired mpg</th>
+    <th>Color</th>
+    <th>Year from</th>
+    <th>Year to</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @wanted_ads.each do |wanted_ad| %>
+  <tr>
+    <td><%= wanted_ad.car_type %></td>
+    <td><%= wanted_ad.car_make %></td>
+    <td><%= wanted_ad.car_model %></td>
+    <td><%= wanted_ad.mileage_from %></td>
+    <td><%= wanted_ad.mileage_to %></td>
+    <td><%= wanted_ad.budget_from %></td>
+    <td><%= wanted_ad.budget_to %></td>
+    <td><%= wanted_ad.description %></td>
+    <td><%= wanted_ad.desired_mpg %></td>
+    <td><%= wanted_ad.color %></td>
+    <td><%= wanted_ad.year_from %></td>
+    <td><%= wanted_ad.year_to %></td>
+    <td><%= link_to 'Show', wanted_ad %></td>
+    <td><%= link_to 'Edit', edit_wanted_ad_path(wanted_ad) %></td>
+    <td><%= link_to 'Destroy', wanted_ad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+
+<% end %>
+
+
+</table>
+<BR>
+
+<br />
+
+<%= link_to 'New Wanted ad', new_wanted_ad_path %>
+
+
+
 <%= link_to 'Back', users_path %>
 <BR><BR>
 
@@ -39,7 +87,6 @@
 
 <% if signed_in? %>
 
-<%= link_to "Profile", user_path %>
 <%= link_to "Sign out", signout_path, method: "delete" %>
 
 <% else %>

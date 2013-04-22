@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<p><img src="<%= @offer.image1 %>"></p>
 <p>
   <b>Ownermake:</b>
   <%= @offer.ownermake %>
@@ -35,10 +36,6 @@
   <%= @offer.offerprice %>
 </p>
 
-<p>
-  <b>Image1:</b>
-  <%= @offer.image1 %>
-</p>
 
 <p>
   <b>Seller:</b>
@@ -53,5 +50,5 @@
 
 <%= link_to 'Edit', edit_wanted_ad_offer_path(@offer) %> |
 <%= link_to 'Back', wanted_ad_offers_path %>
-
+<P>
 <%= @carinfo %>

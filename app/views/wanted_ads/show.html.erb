@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Car type:</b>
-  <%= @wanted_ad.car_type %>
+  <b>Car type:</b><BR>
+  <img src="<%= @wanted_ad.car_type %>">
 </p>
 
 <p>
@@ -60,6 +60,7 @@
   <%= @wanted_ad.year_to %>
 </p>
 
-
+<%= link_to 'See all Offers for this Wanted Ad', wanted_ad_offers_path(@wanted_ad) %>
+<P>
 <%= link_to 'Edit', edit_wanted_ad_path(@wanted_ad) %> |
 <%= link_to 'Back', wanted_ads_path %>

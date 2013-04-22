@@ -1,0 +1,56 @@
+html { 
+  
+  background-image:url('http://i.imgur.com/HMka8xW.jpg');
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+
+body {
+font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;width: 80%;
+margin-right: auto;
+margin-left: auto;
+width: 1000px;
+background-color:rgba(242,227,126,0.9);
+padding: 20px;
+padding-bottom: 300px;
+border-radius: 20px;
+margin-top: 40px;
+margin-bottom: 50px; 
+border: 2px dotted #D57EF2;
+
+
+}
+
+h1 {
+  font-size: 32pt;
+  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  color: 3ABF22;
+  text-align: center;
+  padding: 10px;
+  text-align: center;
+  background-color: #D3F2F2;
+  border-radius: 12px;
+}
+
+img {
+  border: 2px solid #666666;
+  border-radius: 8px;
+  max-width:240px; 
+  max-height:200px;
+  
+
+}
+
+#floatbox { 
+float:left;
+margin: 10px;
+padding-bottom: 100px;
+
+}
+
+
+#text { 
+  margin-left: 20px;
+  margin-bottom: 100px;
+}

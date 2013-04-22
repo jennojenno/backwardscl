@@ -8,12 +8,11 @@
    <div id="text"><BR><%= a.owneryear %> <%= a.ownermake %> <%= a.ownermodel %>
    
    <BR><%= a.ownermileage %> miles, Offer price $<%= a.offerprice %>
-   <BR>
+   
    <%= link_to 'Show', wanted_ad_offer_path(a.wanted_ad_id, a.id) %>
    <%= link_to 'Edit', edit_wanted_ad_offer_path(a.wanted_ad_id, a.id) %>
 
 
-<%= link_to 'Make a new offer for this Wanted Ad', new_wanted_ad_offer_path(a.wanted_ad_id) %>
 <% end %>
 
 <br />
