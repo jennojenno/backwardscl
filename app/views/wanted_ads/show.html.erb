@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p><div float="left">
-  <b>Car type:</b><BR>
+<div id="floatbox">
+  <b></b>
   <img src="<%= @wanted_ad.car_type %>">
 </p>
 <p>
@@ -13,8 +13,8 @@
   <b>Car model:</b>
   <%= @wanted_ad.car_model %>
 </p>
-
-<p>
+</div>
+<p><div id="floatbox">
   <b>Mileage from:</b>
   <%= @wanted_ad.mileage_from %>
 </p>
@@ -47,8 +47,8 @@
 <p>
   <b>Color:</b>
   <%= @wanted_ad.color %>
-</p>
-
+</p></div>
+<div id="floatbox">
 <p>
   <b>Year from:</b>
   <%= @wanted_ad.year_from %>
@@ -58,9 +58,12 @@
   <b>Year to:</b>
   <%= @wanted_ad.year_to %>
 </p>
-</div>
+
 
 <%= link_to 'See all Offers for this Wanted Ad', wanted_ad_offers_path(@wanted_ad) %>
 <P>
 <%= link_to 'Edit', edit_wanted_ad_path(@wanted_ad) %> |
 <%= link_to 'Back', wanted_ads_path %>
+
+</div>
+<BR><P>

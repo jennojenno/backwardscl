@@ -5,15 +5,15 @@
 <div id="floatbox">
 
    <img src="<%= wanted_ad.car_type %>" />
-   <div id="text"><BR>From <%= wanted_ad.mileage_from %>
+   <div id="text">From <%= wanted_ad.mileage_from %>
    to <%= wanted_ad.mileage_to %> miles
    <BR>Budget: $<%= wanted_ad.budget_from %> - 
    $<%= wanted_ad.budget_to %>
    <BR>Years <%= wanted_ad.year_from %>
    to <%= wanted_ad.year_to %>
-   <BR><%= link_to 'Show this wanted ad', wanted_ad %> 
+   <BR>>> <%= link_to 'Show this wanted ad', wanted_ad %> 
 </div>
-   <BR><BR>
+   <BR>
 
 </div>
 <% end %>

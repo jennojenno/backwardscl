@@ -4,19 +4,20 @@
 <% @wanted_ad.offers.each do |a| %>
 <div id="floatbox">
 
-    <img src="<%= a.image1 %>">
-   <div id="text"><BR><%= a.owneryear %> <%= a.ownermake %> <%= a.ownermodel %>
+<img src="<%= a.image1 %>" />
+   <div id="text"><%= a.owneryear %> <%= a.ownermake %> <%= a.ownermodel %>
    
    <BR><%= a.ownermileage %> miles, Offer price $<%= a.offerprice %>
    <BR>
    <%= link_to 'Show', wanted_ad_offer_path(a.wanted_ad_id, a.id) %> / 
    <%= link_to 'Edit', edit_wanted_ad_offer_path(a.wanted_ad_id, a.id) %>
-</div>
+</div></div>
 <% end %>
 
-<BR><div float="right"><b>
-<%= link_to 'Make a new offer', new_wanted_ad_offer_path(params[:wanted_ad_id]) %></b>
-</div>
+
+<BR><b><p align="center">
+<%= link_to 'Make a new offer', new_wanted_ad_offer_path(params[:wanted_ad_id]) %></center></b>
+
 <P><BR>
 <br />
 

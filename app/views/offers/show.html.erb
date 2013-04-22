@@ -1,7 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<div id="floatbox">
 <p><img src="<%= @offer.image1 %>"></p>
-<p>
+<p></div>
+  <div id="floatbox">
   <b>Ownermake:</b>
   <%= @offer.ownermake %>
 </p>
@@ -10,7 +12,6 @@
   <b>Ownermodel:</b>
   <%= @offer.ownermodel %>
 </p>
-
 <p>
   <b>Owneryear:</b>
   <%= @offer.owneryear %>
@@ -25,8 +26,8 @@
   <b>Ownerdesc:</b>
   <%= @offer.ownerdesc %>
 </p>
-
-<p>
+</div>
+<p><div id="floatbox">
   <b>Ownercartype:</b>
   <%= @offer.ownercartype %>
 </p>
@@ -50,8 +51,9 @@
 
 <%= link_to 'Edit', edit_wanted_ad_offer_path(@offer) %> |
 <%= link_to 'Back', wanted_ad_offers_path %>
-<P>
+<P></div>
+<BR><BR>
 <center>Edmunds Make ID# <%= @c.make %></center>
 
-
-<P><font size="1"><%= @carinfo %></font>
+<div style="clear:both">
+<font size="1"><%= @carinfo %></font></div>
