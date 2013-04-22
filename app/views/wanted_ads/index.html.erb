@@ -1,4 +1,4 @@
-<h1>Latest Cars Wanted</h1>
+<h1>Cars Wanted Listings</h1>
 
     
 <% @wanted_ads.each do |wanted_ad| %>
@@ -22,9 +22,9 @@
 
 <br />
 
-<div id="rtlinks">
+<center>
 <%= link_to 'New Wanted ad', new_wanted_ad_path %>
 
 <P>
 <%= link_to "Sign up", new_user_path %> | <%= link_to "Log in", signin_path %>
-</div>
+</center>

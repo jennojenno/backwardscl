@@ -25,8 +25,9 @@ class OffersController < ApplicationController
 
     @carinfo = HTTParty.get("http://api.edmunds.com/v1/api/vehicle/#{ownermake}/#{ownermodel}/#{owneryear}?api_key=qd4n48eua7r2e59hbdte5xd6&fmt=json")
     @carinfo["modelYearHolder"].each do |p|
-      c = Car.new
-      c.make = p["makeName"]
+      @c = Car.new
+      @c.make = p["makeId"]
+      #@c.styles = p["styles"]["name"]
       #c.submodels = p["subModels"]
     end 
 

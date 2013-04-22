@@ -1,4 +1,4 @@
-<h1>Listing offers</h1>
+<h1>Listing Offers</h1>
 
 
 <% @wanted_ad.offers.each do |a| %>
@@ -9,12 +9,14 @@
    
    <BR><%= a.ownermileage %> miles, Offer price $<%= a.offerprice %>
    <BR>
-   <%= link_to 'Show', wanted_ad_offer_path(a.wanted_ad_id, a.id) %>
+   <%= link_to 'Show', wanted_ad_offer_path(a.wanted_ad_id, a.id) %> / 
    <%= link_to 'Edit', edit_wanted_ad_offer_path(a.wanted_ad_id, a.id) %>
-
-
-<%= link_to 'Make a new offer for this Wanted Ad', new_wanted_ad_offer_path(a.wanted_ad_id) %>
+</div>
 <% end %>
 
+<BR><div float="right"><b>
+<%= link_to 'Make a new offer', new_wanted_ad_offer_path(params[:wanted_ad_id]) %></b>
+</div>
+<P><BR>
 <br />
 

@@ -7,24 +7,25 @@ html {
 
 
 body {
-font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;width: 80%;
+font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; width: 80%;
+font-size: 1.2em;
 margin-right: auto;
 margin-left: auto;
 width: 1000px;
-background-color:rgba(242,227,126,0.9);
+background-color:rgba(160,219,213,0.9);
 padding: 20px;
 padding-bottom: 300px;
 border-radius: 20px;
 margin-top: 40px;
 margin-bottom: 50px; 
-border: 2px dotted #D57EF2;
+border: 1px solid #999999;
 
 
 }
 
 h1 {
   font-size: 32pt;
-  font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
   color: 3ABF22;
   text-align: center;
   padding: 10px;
@@ -36,8 +37,8 @@ h1 {
 img {
   border: 2px solid #666666;
   border-radius: 8px;
-  max-width:240px; 
-  max-height:200px;
+
+  max-height:170px;
   
 
 }

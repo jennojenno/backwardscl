@@ -1,10 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<p><div float="left">
   <b>Car type:</b><BR>
   <img src="<%= @wanted_ad.car_type %>">
 </p>
-
 <p>
   <b>Car make:</b>
   <%= @wanted_ad.car_make %>
@@ -59,6 +58,7 @@
   <b>Year to:</b>
   <%= @wanted_ad.year_to %>
 </p>
+</div>
 
 <%= link_to 'See all Offers for this Wanted Ad', wanted_ad_offers_path(@wanted_ad) %>
 <P>
