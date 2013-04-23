@@ -32,9 +32,6 @@ class OffersController < ApplicationController
     end 
 
 
-      #return c.make
-      #return carinfo
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @offer }
